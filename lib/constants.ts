@@ -88,7 +88,7 @@ export const SERVICES = [
     description:
       "Complete brand identity — logo, color palette, typography, brand guidelines, and visual language that builds recognition.",
     tags: ["Logo Design", "Brand Identity", "Guidelines"],
-    href: "/services",
+    href: "/services/branding",
     featured: false,
   },
   {
