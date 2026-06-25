@@ -108,7 +108,7 @@ export const SERVICES = [
     description:
       "Grow your social presence with consistent, engaging content strategies across Instagram, Facebook, LinkedIn, and more.",
     tags: ["Instagram", "Facebook", "LinkedIn"],
-    href: "/services",
+    href: "/services/social-media",
     featured: false,
   },
   {
