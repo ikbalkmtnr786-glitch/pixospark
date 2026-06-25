@@ -118,7 +118,7 @@ export const SERVICES = [
     description:
       "1-on-1 strategy sessions to audit your current marketing, identify growth opportunities, and create a clear action plan.",
     tags: ["Strategy", "Audit", "Growth Plan"],
-    href: "/services",
+    href: "/services/consultation",
     featured: false,
   },
 ];
