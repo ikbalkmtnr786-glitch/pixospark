@@ -87,14 +87,13 @@ export default function HeroSection() {
 
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl p-7 shadow-glass">
               {/* Avatar */}
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-5" style={{ background: "linear-gradient(135deg,#0F172A,#2563EB,#06B6D4)" }}>
-                <div className="absolute inset-0 flex flex-col items-center justify-center gap-2">
-                  <span className="font-poppins font-extrabold gradient-text" style={{ fontSize: "5rem" }}>IK</span>
-                  <span className="text-white/40 text-xs">Replace with your photo</span>
-                </div>
-                {/* Shimmer */}
-                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent animate-[shimmer_3s_infinite]" />
-              </div>
+              <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-5">
+  <img
+    src="/111.jpeg"
+    alt="Ikbal K M - Founder of Pixo Spark"
+    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+  />
+</div>
 
               <h2 className="font-poppins font-bold text-lg text-[var(--color-text)] mb-0.5">Ikbal K M</h2>
               <p className="text-[var(--color-text-muted)] text-sm mb-3">Founder &amp; Digital Growth Strategist</p>
