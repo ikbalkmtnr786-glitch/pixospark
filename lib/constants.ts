@@ -78,7 +78,7 @@ export const SERVICES = [
     description:
       "Eye-catching social media posts, banners, posters, and brand visuals that make your brand stand out in crowded feeds.",
     tags: ["Social Posts", "Banners", "Posters"],
-    href: "/services",
+    href: "/services/graphic-design",
     featured: false,
   },
   {
