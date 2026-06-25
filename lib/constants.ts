@@ -98,7 +98,7 @@ export const SERVICES = [
     description:
       "Optimize your GBP to appear in local searches and Google Maps — essential for local and GCC businesses.",
     tags: ["Local SEO", "GMB", "Google Maps"],
-    href: "/services",
+    href: "/services/google-business",
     featured: false,
   },
   {
