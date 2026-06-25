@@ -91,7 +91,10 @@ export default function HeroSection() {
   <img
     src="/111.jpeg"
     alt="Ikbal K M - Founder of Pixo Spark"
+    width={600}
+    height={600}
     style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
   />
 </div>
 
