@@ -218,7 +218,7 @@ export const CASE_STUDIES =  [
   
   
 
-export const TESTIMONIALS = export const TESTIMONIALS = [
+export const TESTIMONIALS =  [
   {
     id: "1",
     name: "You Could Be First",
