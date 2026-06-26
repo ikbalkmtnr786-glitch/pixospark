@@ -2,8 +2,8 @@
 // TrustBar
 export default function TrustBar() {
   const items = [
-    "Meta Certified Partner","Google Analytics Certified","SEO Specialist",
-    "AI Content Expert","Website Developer","50+ Projects Delivered",
+    "Meta Ads Certified","Google Analytics Certified","SEO Specialist",
+    "AI Content Expert","Website Developer","Full-Stack Marketer",
     "GCC Specialist","Available Worldwide","Creative Design Expert",
   ];
   const doubled = [...items, ...items];
