@@ -14,10 +14,10 @@ export const SITE_CONFIG = {
 };
 
 export const STATS = [
-  { value: 50, suffix: "+", label: "Projects Completed" },
-  { value: 30, suffix: "+", label: "Happy Clients" },
-  { value: 3, suffix: "+", label: "Years Experience" },
-  { value: 10, suffix: "+", label: "Countries Served" },
+  { value: 4, suffix: "+", label: "Years of Learning" },
+  { value: 10, suffix: "+", label: "Services Offered" },
+  { value: 48, suffix: "hr", label: "Onboarding Time" },
+  { value: 100, suffix: "%", label: "Personal Attention" },
 ];
 
 export const SERVICES = [
@@ -161,106 +161,72 @@ export const WHY_CHOOSE = [
   },
 ];
 
-export const CASE_STUDIES = [
-  {
-    id: "real-estate",
+export const CASE_STUDIES =  [
+  
+    id: "meta-ads-strategy",
     category: "Meta Ads",
-    title: "Lead Generation — Real Estate Developer",
+    title: "Sample Strategy — Real Estate Lead Generation",
     description:
-      "Transformed a developer's ad funnel with custom audiences, slashing cost per lead while tripling volume.",
+      "How we would approach a real estate client: custom audience targeting, creative testing, and funnel optimization to maximize qualified leads at minimum cost.",
     metrics: [
-      { value: "350%", label: "Increase in leads" },
-      { value: "60%", label: "Lower cost per lead" },
-      { value: "2.8M", label: "Impressions/month" },
-      { value: "4.2x", label: "ROAS achieved" },
+      { value: "7–14", label: "Days to first results" },
+      { value: "A/B", label: "Creative testing" },
+      { value: "Full", label: "Funnel setup" },
+      { value: "Weekly", label: "Reporting" },
     ],
   },
   {
-    id: "fashion-seo",
+    id: "seo-strategy",
     category: "SEO Services",
-    title: "Organic Growth — Fashion E-commerce",
+    title: "Sample Strategy — Local Business SEO",
     description:
-      "Took a brand from zero presence to 15,000 monthly organic visitors through targeted SEO and content.",
+      "A structured SEO approach: keyword research, on-page optimization, Google Business Profile setup, and local link building to rank in top 3 local results.",
     metrics: [
-      { value: "15K", label: "Monthly organic visitors" },
-      { value: "45+", label: "Page 1 keywords" },
-      { value: "340%", label: "Traffic increase" },
-      { value: "8x", label: "Return on investment" },
+      { value: "Month 1", label: "Technical audit" },
+      { value: "Month 2", label: "On-page fixes" },
+      { value: "Month 3", label: "Link building" },
+      { value: "Month 4+", label: "Rankings growth" },
     ],
   },
   {
-    id: "website-redesign",
+    id: "website-strategy",
     category: "Website Development",
-    title: "Conversion Redesign — Service Business",
+    title: "Sample Strategy — High-Converting Business Website",
     description:
-      "Replaced an outdated site with a fast, mobile-first design that tripled inquiry calls within 60 days.",
+      "Our website build process: discovery, wireframe, design, development, and launch — optimized for speed, mobile, and conversions from day one.",
     metrics: [
-      { value: "98", label: "PageSpeed score" },
-      { value: "180%", label: "Mobile conversions" },
-      { value: "45%", label: "Bounce rate drop" },
-      { value: "3x", label: "More inquiry calls" },
+      { value: "2–4", label: "Weeks to launch" },
+      { value: "95+", label: "Target PageSpeed" },
+      { value: "Mobile", label: "First design" },
+      { value: "SEO", label: "Ready on launch" },
     ],
   },
   {
-    id: "restaurant-social",
+    id: "social-strategy",
     category: "Social Media",
-    title: "Community Growth — Local Restaurant",
+    title: "Sample Strategy — Brand Growth on Instagram",
     description:
-      "Grew a restaurant from 500 to 12,000 followers in 6 months with strategic content and paid promotions.",
+      "Content calendar, reel strategy, hashtag research, and consistent posting to build an engaged audience and convert followers into customers.",
     metrics: [
-      { value: "12K", label: "Followers in 6 months" },
-      { value: "8.5%", label: "Engagement rate" },
-      { value: "220%", label: "Online orders" },
-      { value: "5★", label: "Google rating" },
+      { value: "30", label: "Posts/month" },
+      { value: "Daily", label: "Story updates" },
+      { value: "Weekly", label: "Reels" },
+      { value: "Monthly", label: "Analytics report" },
     ],
   },
 ];
+  
+  
 
-export const TESTIMONIALS = [
+export const TESTIMONIALS = export const TESTIMONIALS = [
   {
     id: "1",
-    name: "Sarah M.",
-    role: "Real Estate Developer",
-    country: "Dubai, UAE",
-    initials: "SM",
+    name: "You Could Be First",
+    role: "Early Client",
+    country: "India / GCC",
+    initials: "?",
     rating: 5,
-    text: "Ikbal completely transformed our online presence. Our Meta Ads campaign brought in 40+ qualified leads in the first month alone. The ROI was incredible — we made back our investment 5x over.",
-  },
-  {
-    id: "2",
-    name: "Mohammed Al-Rashid",
-    role: "Restaurant Owner",
-    country: "Qatar",
-    initials: "MR",
-    rating: 5,
-    text: "The website Pixo Spark built for us is stunning. It loads incredibly fast, looks professional, and our inquiries have tripled since launch. Best investment we made for our business.",
-  },
-  {
-    id: "3",
-    name: "Priya R.",
-    role: "E-commerce Store Owner",
-    country: "India",
-    initials: "PR",
-    rating: 5,
-    text: "Our Google rankings went from page 5 to page 1 for 12 keywords in just 4 months. The SEO strategy was thorough, well-explained, and the results speak for themselves.",
-  },
-  {
-    id: "4",
-    name: "James T.",
-    role: "Tech Startup Founder",
-    country: "UK",
-    initials: "JT",
-    rating: 5,
-    text: "Ikbal's AI content creation saved us thousands in production costs. The quality is on par with premium agencies at a fraction of the price. Highly recommend!",
-  },
-  {
-    id: "5",
-    name: "Fatima Al-Hassan",
-    role: "Boutique Owner",
-    country: "Kuwait",
-    initials: "FH",
-    rating: 5,
-    text: "Working with Pixo Spark felt like having an in-house marketing team. Responsive, creative, and genuinely invested in our growth. Instagram grew from 1K to 25K followers!",
+    text: "We're just getting started and actively taking on our first clients. Be an early partner — get founder-level attention, priority service, and introductory pricing. Your success story could be featured right here.",
   },
 ];
 
