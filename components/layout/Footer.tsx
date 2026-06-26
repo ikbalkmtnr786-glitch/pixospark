@@ -25,10 +25,9 @@ const footerLinks = {
 };
 
 const socials = [
-  { label: "Instagram", icon: "📷", href: "#" },
-  { label: "Facebook", icon: "📘", href: "#" },
-  { label: "LinkedIn", icon: "💼", href: "#" },
-  { label: "YouTube", icon: "▶️", href: "#" },
+  { label: "Instagram", icon: "📷", href: "https://instagram.com/pixospar" },
+  { label: "Facebook", icon: "📘", href: "https://facebook.com/pixospark" },
+  { label: "LinkedIn", icon: "💼", href: "https://linkedin.com/in/ikbal-km-digital-marketing-executive" },
   { label: "WhatsApp", icon: "💬", href: SITE_CONFIG.whatsappUrl },
 ];
 
