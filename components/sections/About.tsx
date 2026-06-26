@@ -9,14 +9,30 @@ export default function AboutSection() {
     <section id="about" className="section-padding bg-[var(--color-bg)]">
       <div className="container-inner">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          {/* Image */}
           <div className="relative w-full max-w-md mx-auto lg:mx-0">
-            <div className="w-full aspect-[4/5] rounded-3xl flex items-center justify-center overflow-hidden" style={{ background: "linear-gradient(135deg,#0F172A 0%,#1e3a6e 50%,#0F172A 100%)" }}>
-              <div className="text-center">
-                <div className="font-poppins font-extrabold gradient-text mb-2" style={{ fontSize: "6rem" }}>IK</div>
-                <div className="text-white/40 text-sm font-medium">Ikbal K M · Founder</div>
-              </div>
+            <div className="w-full aspect-[4/5] rounded-3xl overflow-hidden">
+              <img
+                src="/pixo_spark_office.png"
+                alt="Pixo Spark Office"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.style.display = "none";
+                  const parent = target.parentElement;
+                  if (parent) {
+                    parent.style.background = "linear-gradient(135deg,#0F172A 0%,#1e3a6e 50%,#0F172A 100%)";
+                    parent.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%">
+                      <div style="font-family:Poppins,sans-serif;font-weight:800;font-size:6rem;background:linear-gradient(135deg,#2563EB,#06B6D4);-webkit-background-clip:text;-webkit-text-fill-color:transparent">IK</div>
+                      <div style="color:rgba(255,255,255,0.4);font-size:0.875rem">Ikbal K M · Founder</div>
+                    </div>`;
+                  }
+                }}
+              />
             </div>
           </div>
+
+          {/* Content */}
           <div>
             <div className="eyebrow">Meet the Founder</div>
             <h2 className="section-title text-[var(--color-text)] mb-4">
