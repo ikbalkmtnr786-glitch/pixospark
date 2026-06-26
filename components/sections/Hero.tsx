@@ -67,7 +67,7 @@ export default function HeroSection() {
             </div>
 
             <div className="flex flex-wrap gap-4 text-sm text-[var(--color-text-muted)]">
-              {["No contracts", "Free consultation", "Results guaranteed"].map((t) => (
+              {["No contracts", "Free consultation", "ROI-Focused Strategy"].map((t) => (
                 <span key={t} className="flex items-center gap-1.5">
                   <span className="text-green-500 font-bold">✓</span> {t}
                 </span>
@@ -79,24 +79,24 @@ export default function HeroSection() {
           <div className="relative">
             {/* Floating badges */}
             <div className="absolute -top-4 right-4 z-10 flex items-center gap-2 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl px-4 py-2.5 shadow-xl text-sm font-semibold animate-[float_3s_ease-in-out_infinite]">
-              🏆 50+ Projects
+              🏆 4+ Years Experience
             </div>
             <div className="absolute bottom-20 -left-4 z-10 flex items-center gap-2 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl px-4 py-2.5 shadow-xl text-sm font-semibold animate-[float_3s_ease-in-out_infinite_1.5s]">
-              ✅ Meta Certified
+              ✅ Meta Ads Certified
             </div>
 
             <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl p-7 shadow-glass">
               {/* Avatar */}
               <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-5">
-  <img
-    src="/111.jpeg"
-    alt="Ikbal K M - Founder of Pixo Spark"
-    width={600}
-    height={600}
-    style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-  />
-</div>
+                <img
+                  src="/111.jpeg"
+                  alt="Ikbal K M - Founder of Pixo Spark"
+                  width={600}
+                  height={600}
+                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
+                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                />
+              </div>
 
               <h2 className="font-poppins font-bold text-lg text-[var(--color-text)] mb-0.5">Ikbal K M</h2>
               <p className="text-[var(--color-text-muted)] text-sm mb-3">Founder &amp; Digital Growth Strategist</p>
