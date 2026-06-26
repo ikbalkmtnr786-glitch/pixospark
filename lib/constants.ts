@@ -161,8 +161,8 @@ export const WHY_CHOOSE = [
   },
 ];
 
-export const CASE_STUDIES =  [
-  
+export const CASE_STUDIES = [
+  {
     id: "meta-ads-strategy",
     category: "Meta Ads",
     title: "Sample Strategy — Real Estate Lead Generation",
