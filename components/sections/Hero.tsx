@@ -75,7 +75,7 @@ export default function HeroSection() {
             </div>
           </div>
 
-          {/* Right — Founder Card */}
+          {/* Right — Office Image Card */}
           <div className="relative">
             {/* Floating badges */}
             <div className="absolute -top-4 right-4 z-10 flex items-center gap-2 bg-[var(--color-card)] border border-[var(--color-border)] rounded-2xl px-4 py-2.5 shadow-xl text-sm font-semibold animate-[float_3s_ease-in-out_infinite]">
@@ -85,31 +85,26 @@ export default function HeroSection() {
               ✅ Meta Ads Certified
             </div>
 
-            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl p-7 shadow-glass">
-              {/* Avatar */}
-              <div className="relative w-full aspect-square rounded-2xl overflow-hidden mb-5">
-                <img
-                  src="/111.jpeg"
-                  alt="Ikbal K M - Founder of Pixo Spark"
-                  width={600}
-                  height={600}
-                  style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top" }}
-                  onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                />
-              </div>
-
-              <h2 className="font-poppins font-bold text-lg text-[var(--color-text)] mb-0.5">Ikbal K M</h2>
-              <p className="text-[var(--color-text-muted)] text-sm mb-3">Founder &amp; Digital Growth Strategist</p>
-              <div className="flex items-center gap-2 text-sm font-semibold text-green-500 mb-5">
-                <span className="w-2 h-2 rounded-full bg-green-500 animate-[badgePulse_2s_ease-in-out_infinite]" />
-                Available for new projects
-              </div>
-              <div className="flex flex-wrap gap-2">
-                {["Meta Ads", "SEO", "AI Content", "Web Dev"].map((tag) => (
-                  <span key={tag} className="text-xs font-semibold px-3 py-1 rounded-full border" style={{ background: "rgba(37,99,235,0.08)", borderColor: "rgba(37,99,235,0.2)", color: "#2563EB" }}>
-                    {tag}
-                  </span>
-                ))}
+            <div className="bg-[var(--color-card)] border border-[var(--color-border)] rounded-3xl overflow-hidden shadow-glass">
+              <img
+                src="/pixo_spark_2.png"
+                alt="Pixo Spark - AI Powered Digital Marketing"
+                style={{ width: "100%", height: "100%", objectFit: "cover" }}
+              />
+              <div className="p-5">
+                <h2 className="font-poppins font-bold text-lg text-[var(--color-text)] mb-0.5">Ikbal K M</h2>
+                <p className="text-[var(--color-text-muted)] text-sm mb-3">Founder &amp; Digital Growth Strategist</p>
+                <div className="flex items-center gap-2 text-sm font-semibold text-green-500 mb-4">
+                  <span className="w-2 h-2 rounded-full bg-green-500 animate-[badgePulse_2s_ease-in-out_infinite]" />
+                  Available for new projects
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {["Meta Ads", "SEO", "AI Content", "Web Dev"].map((tag) => (
+                    <span key={tag} className="text-xs font-semibold px-3 py-1 rounded-full border" style={{ background: "rgba(37,99,235,0.08)", borderColor: "rgba(37,99,235,0.2)", color: "#2563EB" }}>
+                      {tag}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
