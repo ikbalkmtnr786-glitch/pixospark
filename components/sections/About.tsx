@@ -7,7 +7,7 @@ export default function AboutSection() {
           <div className="relative w-full max-w-md mx-auto lg:mx-0">
             <div className="w-full aspect-[4/5] rounded-3xl overflow-hidden">
               <img
-                src="/pixo_spark_office.png"
+                src="/pixo%20spark%20office.png"
                 alt="Pixo Spark Office"
                 style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center" }}
               />
