@@ -3,11 +3,35 @@ import { useState } from "react";
 import { SITE_CONFIG } from "@/lib/constants";
 
 export default function ContactSection() {
-  const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+  const [form, setForm] = useState({ name: "", email: "", phone: "", service: "", budget: "", message: "" });
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = () => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async () => {
+    if (!form.name || !form.email || !form.service || !form.message) {
+      alert("Please fill in all required fields.");
+      return;
+    }
     setStatus("loading");
-    setTimeout(() => setStatus("success"), 1800);
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      const data = await res.json();
+      if (data.success) {
+        setStatus("success");
+        setForm({ name: "", email: "", phone: "", service: "", budget: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -22,27 +46,26 @@ export default function ContactSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
-          {/* Form */}
           <div className="lg:col-span-3">
             <div className="flex flex-col gap-4">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-[var(--color-text-muted)]">Full Name *</label>
-                  <input className="form-input" placeholder="Your full name" type="text" />
+                  <input name="name" value={form.name} onChange={handleChange} className="form-input" placeholder="Your full name" type="text" />
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-[var(--color-text-muted)]">Email Address *</label>
-                  <input className="form-input" placeholder="your@email.com" type="email" />
+                  <input name="email" value={form.email} onChange={handleChange} className="form-input" placeholder="your@email.com" type="email" />
                 </div>
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-semibold text-[var(--color-text-muted)]">Phone / WhatsApp</label>
-                <input className="form-input" placeholder="+91 or +971..." type="tel" />
+                <input name="phone" value={form.phone} onChange={handleChange} className="form-input" placeholder="+91 or +971..." type="tel" />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-[var(--color-text-muted)]">Service Needed *</label>
-                  <select className="form-input">
+                  <select name="service" value={form.service} onChange={handleChange} className="form-input">
                     <option value="">Select a service...</option>
                     <option>Meta Ads Management</option>
                     <option>SEO Services</option>
@@ -54,7 +77,7 @@ export default function ContactSection() {
                 </div>
                 <div className="flex flex-col gap-1.5">
                   <label className="text-xs font-semibold text-[var(--color-text-muted)]">Budget Range</label>
-                  <select className="form-input">
+                  <select name="budget" value={form.budget} onChange={handleChange} className="form-input">
                     <option value="">Select budget...</option>
                     <option>Under ₹10,000</option>
                     <option>₹10,000 – ₹50,000</option>
@@ -66,12 +89,16 @@ export default function ContactSection() {
               </div>
               <div className="flex flex-col gap-1.5">
                 <label className="text-xs font-semibold text-[var(--color-text-muted)]">Your Message *</label>
-                <textarea className="form-input min-h-[120px] resize-y" placeholder="Tell me about your business and goals..." />
+                <textarea name="message" value={form.message} onChange={handleChange} className="form-input min-h-[120px] resize-y" placeholder="Tell me about your business and goals..." />
               </div>
 
               {status === "success" ? (
                 <div className="p-4 rounded-2xl text-center font-semibold text-green-700 bg-green-50 dark:bg-green-900/20 dark:text-green-400 border border-green-200 dark:border-green-800">
                   ✓ Message sent! We&apos;ll reply within 2–4 hours.
+                </div>
+              ) : status === "error" ? (
+                <div className="p-4 rounded-2xl text-center font-semibold text-red-600 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+                  ✗ Something went wrong. Please WhatsApp us directly.
                 </div>
               ) : (
                 <button onClick={handleSubmit} disabled={status === "loading"}
@@ -82,7 +109,6 @@ export default function ContactSection() {
             </div>
           </div>
 
-          {/* Info */}
           <div className="lg:col-span-2 flex flex-col gap-4">
             {[
               { icon: "📞", label: "Phone", val: SITE_CONFIG.phone, href: `tel:${SITE_CONFIG.phone}` },
