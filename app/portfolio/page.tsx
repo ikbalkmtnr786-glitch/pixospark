@@ -23,7 +23,7 @@ const categories = [
     desc: "Logo design & brand identity work",
     color: "from-purple-600 to-pink-500",
     projects: [
-      { title: "Pixo Spark Logo Design", client: "Pixo Spark", image: "/pixospark-logo.png" },
+      { title: "Pixo Spark Logo Design", client: "Pixo Spark", image: "/pixospark-logo.png.jpg" },
       { title: "Pixo Spark Brand Identity", client: "Pixo Spark", image: "/pixo%20new.jpg" },
       { title: "Creative Design 4", client: "Pixo Spark", image: "/post9.png" },
       { title: "Creative Design 5", client: "Pixo Spark", image: "/post10.png" },
@@ -37,9 +37,9 @@ const categories = [
     color: "from-orange-500 to-yellow-400",
     projects: [
       { title: "TET Skills Course Ad", client: "The TET Skills", image: "/post2.jpg" },
-      { title: "TET Skills Offer Poster", client: "The TET Skills", image: "/post3.jpg" },
-      { title: "Prime Business Awards Poster", client: "BGS 2026", image: "/post4.jpg" },
-      { title: "Ynes Digital Solutions", client: "Ynes", image: "/post5.jpg" },
+      { title: "Prime Business Awards Poster", client: "BGS 2026", image: "/post3.jpg" },
+      { title: "Ynes Digital Solutions", client: "Ynes", image: "/post4.jpg" },
+      { title: "TET Skills Offer Poster", client: "The TET Skills", image: "/post5.jpg" },
       { title: "Creative Design 6", client: "Client", image: "/post13.png" },
       { title: "Creative Design 7", client: "Client", image: "/post14.png" },
     ],
