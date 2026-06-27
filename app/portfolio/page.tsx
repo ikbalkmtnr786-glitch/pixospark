@@ -11,8 +11,6 @@ const categories = [
     color: "from-blue-600 to-cyan-500",
     projects: [
       { title: "Growing Brands Post", client: "Pixo Spark", image: "/post1.jpg" },
-      { title: "Football Ad Creative", client: "Pixo Spark", image: "/pix.jpg" },
-      { title: "Digital Marketing Poster", client: "Pixo Spark", image: "/story.jpg" },
       { title: "Creative Design 1", client: "Pixo Spark", image: "/post6.png" },
       { title: "Creative Design 2", client: "Pixo Spark", image: "/post7.png" },
       { title: "Creative Design 3", client: "Pixo Spark", image: "/post8.png" },
@@ -20,12 +18,13 @@ const categories = [
   },
   {
     id: "branding",
-    label: "Branding",
+    label: "Branding & Logo",
     icon: "✨",
     desc: "Logo design & brand identity work",
     color: "from-purple-600 to-pink-500",
     projects: [
-      { title: "Pixo Spark Logo Design", client: "Pixo Spark", image: "/pixo-new.jpg" },
+      { title: "Pixo Spark Logo Design", client: "Pixo Spark", image: "/pixospark-logo.png" },
+      { title: "Pixo Spark Brand Identity", client: "Pixo Spark", image: "/pixo%20new.jpg" },
       { title: "Creative Design 4", client: "Pixo Spark", image: "/post9.png" },
       { title: "Creative Design 5", client: "Pixo Spark", image: "/post10.png" },
     ],
@@ -39,7 +38,7 @@ const categories = [
     projects: [
       { title: "TET Skills Course Ad", client: "The TET Skills", image: "/post2.jpg" },
       { title: "TET Skills Offer Poster", client: "The TET Skills", image: "/post3.jpg" },
-      { title: "Prime Business Awards", client: "BGS 2026", image: "/post4.jpg" },
+      { title: "Prime Business Awards Poster", client: "BGS 2026", image: "/post4.jpg" },
       { title: "Ynes Digital Solutions", client: "Ynes", image: "/post5.jpg" },
       { title: "Creative Design 6", client: "Client", image: "/post13.png" },
       { title: "Creative Design 7", client: "Client", image: "/post14.png" },
@@ -49,12 +48,11 @@ const categories = [
     id: "ads",
     label: "Meta Ads",
     icon: "📊",
-    desc: "Facebook & Instagram ad campaigns",
+    desc: "Facebook & Instagram ad creatives",
     color: "from-green-500 to-emerald-400",
     projects: [
-      { title: "TET Skills Lead Gen Campaign", client: "The TET Skills Institute", image: "/post2.jpg" },
-      { title: "Creative Ad Design", client: "Pixo Spark", image: "/post15.png" },
-      { title: "Campaign Creative", client: "Pixo Spark", image: "/post16.png" },
+      { title: "TET Skills Lead Gen Ad", client: "The TET Skills", image: "/post2.jpg" },
+      { title: "Coconut Oil Product Ad", client: "Pixo Spark", image: "/post15.png" },
     ],
   },
 ];
