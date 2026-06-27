@@ -24,7 +24,6 @@ const categories = [
     color: "from-purple-600 to-pink-500",
     projects: [
       { title: "Pixo Spark Logo Design", client: "Pixo Spark", image: "/pixospark-logo.png.jpg" },
-      { title: "Pixo Spark Brand Identity", client: "Pixo Spark", image: "/pixo%20new.jpg" },
       { title: "Creative Design 4", client: "Pixo Spark", image: "/post9.png" },
       { title: "Creative Design 5", client: "Pixo Spark", image: "/post10.png" },
     ],
