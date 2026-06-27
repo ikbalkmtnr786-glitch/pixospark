@@ -46,7 +46,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
         />
       </head>
-      <body className={`${poppins.variable} ${inter.variable} font-inter`}>
+      <body className={`${poppins.variable} ${inter.variable} font-inter`}><noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-MXS9JRQ9"
+    height="0"
+    width="0"
+    style={{ display: "none", visibility: "hidden" }}
+  />
+</noscript>
         <ScrollProgress />
         <Navbar />
         <main>{children}</main>
