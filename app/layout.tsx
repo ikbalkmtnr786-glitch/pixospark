@@ -28,32 +28,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* ✅ Google Search Console Verification */}
         <meta name="google-site-verification" content="rREHUrV42XKpQ4oKQmERpS5gcIlrSMLU4JIZrK6jB2U" />
-
-        {/* Theme script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var s=localStorage.getItem('pixospark-theme')...`,
-        {/* Theme script */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){var s=localStorage.getItem('pixospark-theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';var t=s||p;if(t==='dark')document.documentElement.classList.add('dark');})();`,
           }}
         />
-
-        {/* ✅ GTM Script — HEAD-ൽ വേണം */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MXS9JRQ9');`,
+            __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MXS9JRQ9');`,
           }}
         />
-
-        {/* Schema Markup */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getOrganizationSchema()) }}
@@ -68,8 +53,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         />
       </head>
       <body className={`${poppins.variable} ${inter.variable} font-inter`}>
-
-        {/* ✅ GTM noscript — BODY top-ൽ വേണം */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MXS9JRQ9"
@@ -78,7 +61,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             style={{ display: "none", visibility: "hidden" }}
           />
         </noscript>
-
         <ScrollProgress />
         <Navbar />
         <main>{children}</main>
