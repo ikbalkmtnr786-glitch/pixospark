@@ -28,6 +28,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* ✅ Google Search Console Verification */}
+        <meta name="google-site-verification" content="rREHUrV42XKpQ4oKQmERpS5gcIlrSMLU4JIZrK6jB2U" />
+
+        {/* Theme script */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){var s=localStorage.getItem('pixospark-theme')...`,
         {/* Theme script */}
         <script
           dangerouslySetInnerHTML={{
