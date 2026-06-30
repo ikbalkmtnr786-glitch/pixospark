@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Poppins, Inter } from "next/font/google";
 import "./globals.css";
 import { baseMetadata } from "@/lib/metadata";
-import { getOrganizationSchema, getPersonSchema, getLocalBusinessSchema } from "@/lib/schema";
+import { getOrganizationSchema, getPersonSchema, getLocalBusinessSchema, getFAQSchema } from "@/lib/schema";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/widgets/WhatsAppButton";
@@ -50,6 +50,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(getLocalBusinessSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(getFAQSchema()) }}
         />
       </head>
       <body className={`${poppins.variable} ${inter.variable} font-inter`}>
