@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/sections/CTA";
+import { getServiceSchema, getPageFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "AI Content Creation — Blogs, Captions & Ad Copy",
@@ -30,8 +31,23 @@ const faqs = [
 ];
 
 export default function AIContentPage() {
+  const serviceSchema = getServiceSchema(
+    "AI Content Creation",
+    "AI-powered content creation including blog posts, social media captions, video scripts, email sequences, and ad copy, reviewed and refined by a human creative team.",
+    "/services/ai-content"
+  );
+  const faqSchema = getPageFAQSchema(faqs);
+
   return (
     <div className="pt-28 pb-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container-inner mb-16">
         <div className="eyebrow">AI Content Creation</div>
         <h1 className="section-title text-[var(--color-text)] mb-4">
