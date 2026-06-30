@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/sections/CTA";
+import { getServiceSchema, getPageFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Meta Ads Management — Facebook & Instagram Ads",
@@ -30,8 +31,23 @@ const faqs = [
 ];
 
 export default function MetaAdsPage() {
+  const serviceSchema = getServiceSchema(
+    "Meta Ads Management",
+    "Facebook and Instagram ad campaign management including strategy, creative design, targeting, and optimization for lead generation and sales.",
+    "/services/meta-ads"
+  );
+  const faqSchema = getPageFAQSchema(faqs);
+
   return (
     <div className="pt-28 pb-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container-inner mb-16">
         <div className="eyebrow">Meta Ads Management</div>
         <h1 className="section-title text-[var(--color-text)] mb-4">
