@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 
-const baseUrl = "https://pixospark.com";
+const baseUrl = "https://pixospark.vercel.app";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
