@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/sections/CTA";
+import { getServiceSchema, getPageFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "SEO Services in Kerala & GCC",
@@ -30,8 +31,23 @@ const faqs = [
 ];
 
 export default function SEOPage() {
+  const serviceSchema = getServiceSchema(
+    "SEO Services",
+    "Complete on-page, off-page, technical, and local SEO services to help businesses rank higher on Google.",
+    "/services/seo"
+  );
+  const faqSchema = getPageFAQSchema(faqs);
+
   return (
     <div className="pt-28 pb-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container-inner mb-16">
         <div className="eyebrow">SEO Services</div>
         <h1 className="section-title text-[var(--color-text)] mb-4">
