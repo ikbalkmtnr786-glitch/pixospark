@@ -61,3 +61,32 @@ export function getFAQSchema() {
     })),
   };
 }
+
+export function getServiceSchema(name: string, description: string, url: string) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: name,
+    name: name,
+    description: description,
+    provider: {
+      "@type": "Organization",
+      name: "Pixo Spark",
+      url: SITE_CONFIG.url,
+    },
+    areaServed: ["IN", "AE", "SA", "QA", "KW", "BH", "OM"],
+    url: `${SITE_CONFIG.url}${url}`,
+  };
+}
+
+export function getPageFAQSchema(faqs: { q: string; a: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.q,
+      acceptedAnswer: { "@type": "Answer", text: faq.a },
+    })),
+  };
+}
