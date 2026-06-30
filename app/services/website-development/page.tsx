@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CTASection from "@/components/sections/CTA";
+import { getServiceSchema, getPageFAQSchema } from "@/lib/schema";
 
 export const metadata: Metadata = {
   title: "Website Development — Next.js, WordPress & Shopify",
@@ -30,8 +31,23 @@ const faqs = [
 ];
 
 export default function WebsiteDevelopmentPage() {
+  const serviceSchema = getServiceSchema(
+    "Website Development",
+    "Custom website design and development using Next.js, WordPress, or Shopify, built for speed, SEO, and conversions.",
+    "/services/website-development"
+  );
+  const faqSchema = getPageFAQSchema(faqs);
+
   return (
     <div className="pt-28 pb-0">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       <div className="container-inner mb-16">
         <div className="eyebrow">Website Development</div>
         <h1 className="section-title text-[var(--color-text)] mb-4">
