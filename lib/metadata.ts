@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const siteUrl = "https://pixospark.com";
+const siteUrl = "https://pixospark.vercel.app";
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),
